@@ -176,7 +176,7 @@ export const json = series(deleteJson, mergeJson);
  */
 export const dev = series(json, sprite, parallel(styles, views, scripts, images), devWatch);
 
-export const start = series(fonts, json, parallel(styles, views, scripts, images), devWatch);
+export const start = series(fonts, sprite, json, parallel(styles, views, scripts, images), devWatch);
 
 /**
  * Tasks for build
