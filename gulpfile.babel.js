@@ -87,7 +87,7 @@ export const mergeJson = () => src(path.json.root)
   }))
   .pipe(dest(path.json.save));
 
-export const views = () => src(`${path.views.compile}*.pug`)
+export const views = () => src(`${path.views.compile}**/*.pug`)
   .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
   .pipe(data((file) => {
     return JSON.parse(
