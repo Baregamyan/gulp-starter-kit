@@ -136,7 +136,7 @@ export const devWatch = () => {
   });
   watch(`${path.styles.root}**/*.scss`, styles).on('change', bs.reload);
   watch(`${path.views.root}**/*.pug`, views).on('change', bs.reload);
-  watch([`${path.json.save}blocks/*.json`, `${path.json.save}common/*.json` ], json).on('change', bs.reload);
+  watch([`${path.json.save}blocks/**/*.json`, `${path.json.save}common/*.json` ], json).on('change', bs.reload);
   watch(`${path.scripts.root}**/*.js`, scripts).on('change', bs.reload);
   watch(`${path.images.root}**/*.pug`, images).on('change', bs.reload);
 };
